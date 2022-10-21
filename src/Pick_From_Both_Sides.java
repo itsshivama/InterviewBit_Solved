@@ -99,3 +99,27 @@ public class Pick_From_Both_Sides {
 
         }
 }
+
+
+//Solution 2
+
+class Solution {
+    public int solve(ArrayList<Integer> A, int B) {
+        Integer max = Integer.MIN_VALUE;
+
+        int size = A.size();
+        for (int i = 0; i <= B; i++) {
+            int sum = 0;
+            // sum start
+            for(int start = 0; start < i; start++) {
+                sum += A.get(start);
+            }
+            for(int end = 0; end < B-i; end++) {
+                sum += A.get(size-1-end);
+            }
+            max = Math.max(max, sum);
+        }
+
+        return max;
+    }
+}
