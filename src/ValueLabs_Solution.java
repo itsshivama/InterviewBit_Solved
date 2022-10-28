@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//main logic
 public class ValueLabs_Solution {
     public void solution(int N) {
 
